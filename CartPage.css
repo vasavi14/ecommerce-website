@@ -1,0 +1,158 @@
+.button1 {
+    /* position: relative; */
+    /* display: inline-block; */
+    /* margin: 10px; */
+    /* padding: 15px 30px; */
+    text-align: center;
+    font-size: 15px;
+    /* letter-spacing: 1px; */
+    text-decoration: none;
+    color: #0b0325;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #0b0229;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0a0224;
+  }
+  
+  .button1:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #07021a;
+  }
+  
+ .button1:active {
+    transform: scale(0.9);
+  }
+  .button5 {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+  }
+  
+  .button5::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: #555;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+  }
+  
+  .button5::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #555;
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+  }
+  
+  .button5::after,.button5::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  
+  .text {
+    display: flex;
+    
+  }
+  
+  .button-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+  }
+  
+  .text {
+    top: 0
+  }
+  
+  .text,.icon {
+    transition: top 0.5s;
+  }
+  
+  .icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    
+  }
+  
+  .icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .button5:hover {
+    background: #222;
+  }
+  
+  .button5:hover .text {
+    top: -100%;
+  }
+  
+  .button5:hover .icon {
+    top: 0;
+  }
+  
+  .button5:hover:before,.button5:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .button5:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+  }
+  
+  .button5:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+  }
+  
+  
+  /* CartPage.css */
+  /* CartPage.css */
+/* CartPage.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  /* display: flex; */
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  /* padding: 20px; */
+  border-radius: 8px;
+}
+
+
+
+  
+  
